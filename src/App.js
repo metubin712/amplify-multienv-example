@@ -91,11 +91,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h2>Add Todo</h2>
+        <h2>Yeni Ekle</h2>
         <Connect mutation={graphqlOperation(mutations.createTodo)}>
           {({ mutation }) => <AddTodo onCreate={mutation} />}
         </Connect>
-
+        <h2>Listeniz</h2>
         <Connect
           query={graphqlOperation(queries.listTodos)}
           subscription={graphqlOperation(subscriptions.onCreateTodo)}
